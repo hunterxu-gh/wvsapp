@@ -14,7 +14,7 @@ After compilation the final result will be a DLL one dll for the client componen
 
 # Configuring version:
 
-Each compilation supports either GMS Version 53 client or Brazil Maple Story V8 and the version can be set in Config.cpp in WvsCommon project, along with other debug flags. 
+Each compilation supports either GMS Version 53 client or Brazil Maple Story and the version can be set in Config.cpp in WvsCommon project, along with other debug flags. 
 
 # Stability:
 
