@@ -1,17 +1,32 @@
-# Wvs V8 extension
+# Wvs extension
 
-This repository contains a small framework to introduce new code in both client and server of the leaked version of Brazil Maple Story server files.
-The ultimate goal is to preserve the identity of a game that is almost dead and allow developers to include new code and fix bugs in the old executable.
+This project includes a small framework to extend funcionality into Brazil MapleStory server files using C++.
 
-# Architecture
-- WVSCommon - Offer classes for hooking code into the compiled binaries and some utility classes reimplementations such as ZMap, ZList and ZString
-- WvsGame - Contains reimplementation of C++ classes that maps to the data structures in memory of the executable. 
-- WvsLogin - Contains fixes for the login server.
-- WvsShop - Contains fixes for the cash shop server.
-- WvsClient - Contains bypass and a set of extensions for the BMS V8 client.
+It is composed by the following components: 
+- WVSCommon - shared code among the other parts.
+- WvsClient - client code that runs on top of maplestory.exe and includes bypass code for BMS and GMS V53. 
+- WvsGame - extends the main gameplay binaries in server architecture architecture. 
+- WvsShop - includes fixes for the cash shop server.
+- WvsCenter - includes fixes for the the core part that connecteds all the server components.
+- WvsLogin - includes fixes for the login server. 
 
-# Compiling 
+After compilation the final result will be a DLL one dll for the client component and one for each server component.
 
- - Use visual studio 2017.
+# Configuring version:
 
+Each compilation supports either GMS Version 53 client or Brazil Maple Story V8 and the version can be set in Config.cpp in WvsCommon project, along with other debug flags. 
+
+# Stability:
+
+Crashs may happen in WvsGame.exe / WvsGame.dll and is not ready for production use yet. 
+
+# Global Maple Story V53 support:
+
+The BMS V8 binaries have a packet structures similar to GMS V53 which allows a GMS client  to connect  to BMS backend. Although higher versions may be supported until character selection. There are a lot of changes during version 54 that breaks some packet structures, for example, V54 is prepared to support multiple pets, while v53 not. 
+
+Know issues:
+- After a login-out there is no way to loggin again without restarting the client.
+
+The solo purpose of this implementation was to study reversing enginnering. 
+The owner of this repository is not responsable for any misusage relating to this.
 
