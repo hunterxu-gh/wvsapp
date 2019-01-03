@@ -9,9 +9,7 @@
 typedef HMODULE (WINAPI* GetModuleHandleA_ptr)(LPCSTR lpModuleName);
 GetModuleHandleA_ptr _GetModuleHandleA;
 
-char *url = "https://www.youtube.com/embed/uXCsnDQa6io";
-//3th job trailer
-//char *url = "https://www.youtube.com/embed/28rN8Sqycn4";
+char *url = "https://www.youtube.com/embed/28rN8Sqycn4";
 
 bool initialized = false;
 #if !IS_GMS
