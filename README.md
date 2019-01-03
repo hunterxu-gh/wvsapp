@@ -1,9 +1,9 @@
-# Wvs extension
+# WvsApp
 
 This project includes a small framework to extend funcionality into Brazil MapleStory server files using C++.
 
 It is composed by the following components: 
-- WVSCommon - shared code among the other parts.
+- WvsCommon - shared code among the other parts.
 - WvsClient - client code that runs on top of maplestory.exe and includes bypass code for BMS and GMS V53. 
 - WvsGame - extends the main gameplay binaries in server architecture architecture. 
 - WvsShop - includes fixes for the cash shop server.
