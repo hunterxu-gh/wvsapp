@@ -7,7 +7,7 @@ It is composed by the following components:
 - WvsClient - client code that runs on top of maplestory.exe and includes bypass code for BMS and GMS V53. 
 - WvsGame - extends the main gameplay binaries in server architecture architecture. 
 - WvsShop - includes fixes for the cash shop server.
-- WvsCenter - includes fixes for the the core part that connecteds all the server components.
+- WvsCenter - includes fixes for the the core part that connecteds all the server components(not implemented).
 - WvsLogin - includes fixes for the login server. 
 
 After compilation the final result will be a DLL one dll for the client component and one for each server component.
